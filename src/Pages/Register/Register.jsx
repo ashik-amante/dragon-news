@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navber from "../Shared/Navber/Navber";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -8,6 +8,7 @@ const Register = () => {
     const {createUser} = useContext(AuthContext)
     const [success,setSuccess] = useState(null)
     const [error,setError] = useState(null)
+    const navigate = useNavigate()
 
     const handleRegister = e =>{
         e.preventDefault()
@@ -20,6 +21,7 @@ const Register = () => {
         createUser(email,password)
         .then(result=>{
             console.log(result.user);
+            navigate('/')
             setSuccess('Register Successfull !!')
         })
         .catch(error=>{

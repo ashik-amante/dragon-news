@@ -18,7 +18,7 @@ const Home = () => {
 
     //  Or we can use useLoader data instade of use effect . have to set loader in route 
     return (
-        <div>
+        <div className="max-w-7xl mx-auto">
             <Header></Header>
             <Braking></Braking>
             <Navber></Navber>
@@ -26,7 +26,7 @@ const Home = () => {
                 <div className="grid col-span-1">
                     <Left></Left>
                 </div>
-                <div className="grid col-span-2">
+                <div className="grid md:col-span-2">
                     {
                         allNews.map(news => <div key={news._id}>
                             <div className="space-y-5 mb-10 p-2 mt-2">

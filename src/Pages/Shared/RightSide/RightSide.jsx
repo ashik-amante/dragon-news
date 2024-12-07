@@ -3,13 +3,19 @@ import { FaX } from "react-icons/fa6";
 import q1 from '../../../assets/class.png'
 import q2 from '../../../assets/playground.png'
 import q3 from '../../../assets/swimming.png'
+import { useContext } from "react";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 const RightSide = () => {
+    const {googleSignin} = useContext(AuthContext)
+    const handlegooglesignIn  = () =>{
+        googleSignin()
+    }
     return (
-        <div className="border p-2 ">
+        <div className=" p-2 ">
             <p className="text-xl font-bold mb-6">Login With </p>
             <div className="mb-10">
-                <button className="btn btn-outline w-full mb-2 ">
+                <button onClick={handlegooglesignIn} className="btn btn-outline w-full mb-2 ">
                     <FaGoogle />
                     Login With Google
                 </button>
@@ -32,7 +38,7 @@ const RightSide = () => {
                     <FaFacebook></FaFacebook>
                     <a href="">Facebook</a>
                 </div>
-            </div>npm 
+            </div>
             <div className="mb-10 p-2">
                 <h1 className="text-xl font-bold mb-6">Q Zone</h1>
                 <img src={q1} alt="" />

@@ -18,7 +18,7 @@ const News = () => {
             <Navber></Navber>
             <h1 className='font-bold text-xl'>Dragon News</h1>
             <div className='grid grid-cols-4 gap-4'>
-                <div className='grid col-span-3 border p-8'>
+                <div className='grid col-span-3  p-8'>
                     <div>
                         <img className='mb-5' src={news.image_url} alt="" />
                         <h2 className='text-xl font-bold mb-2'>{news.title}</h2>
@@ -29,7 +29,7 @@ const News = () => {
                     </div>
 
                 </div>
-                <div className='grid col-span-1 border'>
+                <div className='grid col-span-1 '>
                     <RightSide> </RightSide>
                 </div>
 

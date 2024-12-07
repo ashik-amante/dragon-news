@@ -20,7 +20,7 @@ const Left = () => {
             .then(data => setNews(data))
     }, [])
     return (
-        <div className="border">
+        <div className="">
             <p>left side </p>
             <div className="p-4 text-center">
                 {
